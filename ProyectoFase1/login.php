@@ -4,10 +4,10 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $contrasenia = $_POST['contrasenia'];
-
-    if ($usuario === "admin" && $contrasenia === "admin") {
+    if ($usuario === "admin" && $contrasenia === "3983") {
         $_SESSION['usuario'] = $usuario;
-        header("Location: dashboard.php");
+        $_SESSION['loggedin'] = true;
+        header("Location: privado/dashboard.php");
         exit();
     } else {
         $_SESSION['error'] = "Usuario o contraseña incorrectos.";
