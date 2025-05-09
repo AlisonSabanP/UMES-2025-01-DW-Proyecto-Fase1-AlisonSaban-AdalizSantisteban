@@ -129,7 +129,7 @@ if (isset($_SESSION['error'])) {
                 </ul>
             </div>
             <div class="col-md-6 text-center">
-                <img src="Imagenes/imagen5Hotel.jpeg" alt="Enfoque Hotel" class="img-fluid rounded shadow" style="max-height: 400px;">
+                <img src="Imagenes/imagen2Hotel.jpeg" alt="Enfoque Hotel" class="img-fluid rounded shadow" style="max-height: 400px;">
             </div>
         </div>
     </div>
