@@ -1,0 +1,37 @@
+body {
+    background-color: #ffe4b5;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/palm.png');
+}
+
+.navbar {
+    background-color: #ff7f50 !important; /* Coral vibrante */
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ffe4b5 !important;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+.tropical-header {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #2e8b57;
+    font-size: 3rem;
+    text-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+}
