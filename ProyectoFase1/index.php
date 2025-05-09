@@ -113,7 +113,7 @@ if (isset($_SESSION['error'])) {
 
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row align-items-center g-4">
+        <div class="row align-items-center g-4 flex-md-row-reverse">
             <div class="col-md-6">
                 <h2 class="others-tipos">Sobre nuestro hotel</h2>
                 <p class="lead">
@@ -129,7 +129,7 @@ if (isset($_SESSION['error'])) {
                 </ul>
             </div>
             <div class="col-md-6 text-center">
-                <img src="Imagenes/imagen2Hotel.jpeg" alt="Enfoque Hotel" class="img-fluid rounded shadow" style="max-height: 400px;">
+                <img src="Imagenes/imagen2Hotel.jpeg" alt="Visión Hotel" class="img-fluid rounded shadow" style="max-height: 400px;">
             </div>
         </div>
     </div>
