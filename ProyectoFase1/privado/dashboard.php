@@ -5,6 +5,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: ../index.php");
     exit();
 }
+
+$huespedes = [
+    ["nombre" => "Juan Pérez", "noches" => 2, "edad" => 65],
+    ["nombre" => "María López", "noches" => 3, "edad" => 45],
+    ["nombre" => "Carlos Gómez", "noches" => 1, "edad" => 70]
+];
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +50,28 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <p>Esta es la sección privada para empleados.</p>
     </div>
 
-
+<!-- Sección de Huéspedes -->
+<h3>Huéspedes Hospedados</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Noches</th>
+            <th>Total a Cobrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($huespedes as $huesped): ?>
+            <tr>
+                <td><?php echo htmlspecialchars($huesped['nombre']); ?></td>
+                <td><?php echo $huesped['edad']; ?></td>
+                <td><?php echo $huesped['noches']; ?></td>
+                <td>Q. <?php echo number_format($huesped['noches'] * 350, 2); ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     

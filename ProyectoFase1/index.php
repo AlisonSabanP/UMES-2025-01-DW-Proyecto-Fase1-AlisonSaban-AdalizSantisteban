@@ -74,7 +74,7 @@ if (isset($_SESSION['error'])) {
                     <input type="password" name="contrasenia" class="form-control" placeholder="Contraseña" required>
                 </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Ingresar</button> <!-- ahora verde -->
+                <button type="submit" class="btn btn-success">Ingresar</button> 
             </div>
         </form>
     </div>
