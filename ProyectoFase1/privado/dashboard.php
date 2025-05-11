@@ -11,6 +11,16 @@ $huespedes = [
     ["nombre" => "María López", "noches" => 3, "edad" => 45],
     ["nombre" => "Carlos Gómez", "noches" => 1, "edad" => 70]
 ];
+$habitaciones = [
+        ["numero" => 1, "ocupada" => false],
+        ["numero" => 2, "ocupada" => true],
+        ["numero" => 3, "ocupada" => false],
+        ["numero" => 4, "ocupada" => true],
+        ["numero" => 5, "ocupada" => false],
+        ["numero" => 6, "ocupada" => false],
+        ["numero" => 7, "ocupada" => true],
+        ["numero" => 8, "ocupada" => false]
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +43,8 @@ $huespedes = [
                 <img src="../Imagenes/logo.ico" alt="Logo" width="40" class="d-inline-block align-text-top">
                 Hotel El Paraíso
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-2 mb-2 mb-md-0">
+            <div class="ms-auto">
                     <a href="../logout.php" class="btn btn-danger">Cerrar Sesión</a>
-                </ul>
             </div>
         </div>
     </nav>
@@ -50,6 +55,20 @@ $huespedes = [
         <p>Esta es la sección privada para empleados.</p>
     </div>
 
+            <h3>Estado de Habitaciones</h3>
+            <div class="row">
+                <?php foreach ($habitaciones as $habitacion): ?>
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-center <?php echo $habitacion['ocupada'] ? 'bg-danger text-white' : 'bg-success text-white'; ?>">
+                            <div class="card-body">
+                                <h5 class="card-title">Habitación <?php echo $habitacion['numero']; ?></h5>
+                                <p class="card-text"><?php echo $habitacion['ocupada'] ? 'Ocupada' : 'Vacía'; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
 <!-- Sección de Huéspedes -->
 <h3>Huéspedes Hospedados</h3>
 <table class="table table-striped">
@@ -74,7 +93,6 @@ $huespedes = [
 </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    
 </body>
 </html>
 
