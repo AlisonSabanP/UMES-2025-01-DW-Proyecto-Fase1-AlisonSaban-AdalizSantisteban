@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $fecha_salida = $_POST['fecha_salida'];
     
 ?>
-<section class="container mt-5">
+<section class="container" style="margin-top: 100px";>
     <div class="card text-center">
         <h2>¡Gracias por tu reservación, <?php echo $nombre; ?>!</h2>
         <p class="lead">Hemos recibido los siguientes datos:</p>

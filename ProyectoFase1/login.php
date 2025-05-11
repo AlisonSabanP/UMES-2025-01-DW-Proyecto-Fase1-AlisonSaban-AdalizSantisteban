@@ -4,7 +4,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $contrasenia = $_POST['contrasenia'];
-    if ($usuario === "admin" && $contrasenia === "3983") {
+    if ($usuario === "admin" && $contrasenia === "admin") {
         $_SESSION['usuario'] = $usuario;
         $_SESSION['loggedin'] = true;
         header("Location: privado/dashboard.php");
